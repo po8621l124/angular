@@ -1,0 +1,31 @@
+<div>
+  <input type="text" [(ngModel)]="a">
+  <br>
+  <div [ngSwitch]="a>=60">
+    <div *ngSwitchCase="true">好棒</div>
+    <div *ngSwitchCase="false">好笨</div>
+  </div>
+</div>
+<br>
+<div [ngSwitch]="show">
+  <div *ngSwitchCase="true">顯示</div>
+  <div *ngSwitchCase="false">不顯示</div>
+  
+  <div *ngSwitchDefault>預設</div>
+</div>
+
+<div>
+  <h1 *ngIf="show; else noShow">HELLO</h1>
+  <ng-template #noShow>
+    <h1>No Hellow</h1>
+  </ng-template>
+
+  <button (click)="show = !show">change</button>
+</div>
+<br>
+<div>
+  <input type="text" [(ngModel)]="title">
+  <br>
+  <li>A:{{title*30}}</li>
+  <li>B:{{title/5}}</li>
+</div>
