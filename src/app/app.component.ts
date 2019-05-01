@@ -9,4 +9,5 @@ export class AppComponent {
   title = '1';
   show = true;
   a=Number;
+ score=[10,20,30,40,50,60,70,80,90]
 }
